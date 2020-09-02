@@ -1,0 +1,19 @@
+# Compiled class file
+*.class
+*.classpath
+*.project
+*.iml
+
+# Folders
+.metadata/
+.idea/
+*/target/
+*/bin/
+*/.settings/
+
+# Package Files #
+
+*.zip
+*.tar.gz
+*.rar
+
