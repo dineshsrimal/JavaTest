@@ -32,8 +32,8 @@ public class BudgetShopping3 {
             }
             return;
         }
-        IntStream.rangeClosed(0, n / cost[position]).forEach(i -> calculateRecursive(n - i * cost[position],
-                cost, quantity, max, position + 1, count + i * quantity[position]));
+        /*IntStream.rangeClosed(0, n / cost[position]).forEach(i -> calculateRecursive(n - i * cost[position],
+                cost, quantity, max, position + 1, count + i * quantity[position]));*/
         IntStream.rangeClosed(0, n / cost[position]).parallel();
     }
 
