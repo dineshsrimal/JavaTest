@@ -9,9 +9,24 @@ public class ThreadInit {
 
         MyThread t1 = new MyThread();
         Thread t2 = new Thread(new MyRunnable());
+
+        Thread t3 = new Thread(){
+            public void run() {
+                System.out.println("Anonymous Thread override");
+            }
+        };
+
+        Thread t4 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("Anonymous Runnable implementation");
+            }
+        });
+
         t1.start();
         t2.start();
-
+        t3.start();
+        t4.start();
     }
 
 
