@@ -1,4 +1,4 @@
-package com.codetest;
+package com.java8;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -28,6 +28,21 @@ public class Java8SortTest {
 
         System.out.println(Arrays.toString(sortedStream.toArray()));
 
+    }
+}
+
+class Student {
+    Integer age;
+
+    public Student(int custAge) {
+        this.age = custAge;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "age=" + age +
+                '}';
     }
 }
 
