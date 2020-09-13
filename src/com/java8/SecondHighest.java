@@ -14,14 +14,12 @@ public class SecondHighest {
         int[] arr = {14, 46, 47, 45, 92, 52, 48, 36, 66, 85};
 
         System.out.println("Second High....: " + findSecondHigh(arr));
-
-
     }
 
     public static int findSecondHigh(int[] arr) {
 
         List<Integer> intObjArr = Arrays.stream(arr).boxed().collect(Collectors.toList());
-        List<Integer> sortedList = intObjArr.stream().sorted(Comparator.<Integer>reverseOrder()).collect(Collectors.toList());
+        List<Integer> sortedList = intObjArr.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
 
         //----Method 2 using Lambda as a Comparator
 
