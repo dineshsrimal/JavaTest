@@ -20,6 +20,8 @@ public class ConvertIntArrToPremitive {
         //Convert List to array
         Integer[] intObjArr2 = integerList.toArray(new Integer[0]);
 
+        integerList.stream().forEach(System.out::println);
+
 
     }
 }
