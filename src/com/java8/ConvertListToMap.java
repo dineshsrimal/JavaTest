@@ -16,15 +16,20 @@ public class ConvertListToMap {
     public static void main(String[] args) {
         List<String> strList = Arrays.asList("Dinesh", "Saman", "Lenin");
 
+        getObjList(strList).forEach(customer -> System.out.println(customer.toString()));
+
         getStrMap(strList).forEach((k, v) -> System.out.println(k + " : " + v));
 
-        getObjList(strList).forEach(customer -> System.out.println(customer.toString()));
+
     }
 
     public static List<Customer> getObjList(List<String> strList) { // Note:- use Stream.map return list of new Object type from existing list elements
+
+        Student student = new Student(8);
+
         return strList.stream()
                 .map(s -> {
-                    int age = new Random().nextInt(10 - 5) + 5;
+                    int age = new Random().nextInt(10 - 5) + student.age;
                     return new Customer(s, age);
                 })
                 .collect(Collectors.toList());
