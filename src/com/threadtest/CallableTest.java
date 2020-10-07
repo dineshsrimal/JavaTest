@@ -26,6 +26,8 @@ public class CallableTest {
             e.printStackTrace();
         }
 
+        //randomIntFuture.cancel(true);
+        //randomIntFuture2.cancel(true);
         executor.shutdown();
     }
 }
