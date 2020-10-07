@@ -9,6 +9,13 @@ public class OptionalTest {
         Optional<String> longStr = Stream.of("Hello", "Dog", "Flower").filter(s -> s.length() > 5).findAny();
         String matchingVal = longStr.orElse("No match");
         System.out.println("Value Present: " + longStr.isPresent() + ", Matching Val: " +matchingVal);
+
+        if (longStr.isPresent()) {
+            System.out.println(longStr.get());
+        }
+        else {
+            System.out.println("no value");
+        }
     }
 
 }
