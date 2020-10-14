@@ -29,6 +29,16 @@ public class CallableTest {
         //randomIntFuture.cancel(true);
         //randomIntFuture2.cancel(true);
         executor.shutdown();
+
+        FutureTask<Integer> futureTask =  new FutureTask(new CallableTask());
+        Thread t1 = new Thread(futureTask);
+        t1.start();
+        try {
+            int val = futureTask.get();
+            System.out.println("Future Task.." + val);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
 
