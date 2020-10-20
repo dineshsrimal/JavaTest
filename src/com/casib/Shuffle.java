@@ -9,26 +9,30 @@ public class Shuffle {
         System.out.println(solution(123456));
         System.out.println(solution2(123456));
 
+        System.out.println(solution(130));
+        System.out.println(solution2(130));
+
     }
 
     public static int solution2(int A) {
-        String number = String.valueOf(A);
-        int size = number.length();
-        char[] characters = new char[size];
+        String numberStr = String.valueOf(A);
+        int size = numberStr.length();
+        char[] characterArr = new char[size];
         int k = 0;
-        for(int i=0, j=size - 1; i <= j; i++,j--) {
+
+        for(int i = 0, j = size - 1; i <= j; i++, j--) {
 
             if(i!=j) {
-                characters[k] = number.charAt(i);
-                characters[++k] = number.charAt(j);
+                characterArr[k] = numberStr.charAt(i);
+                characterArr[++k] = numberStr.charAt(j);
             }else {
-                characters[k]= number.charAt(i);
+                characterArr[k]= numberStr.charAt(i);
             }
 
             k++;
         }
 
-        return Integer.parseInt(String.valueOf(characters));
+        return Integer.parseInt(String.valueOf(characterArr));
     }
 
     public static int solution(int A) {

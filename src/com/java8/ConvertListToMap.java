@@ -36,7 +36,7 @@ public class ConvertListToMap {
     }
 
     public static Map<String, String> getStrMap(List<String> strList) { // Note:- use Collectors.toMap to generate Map from List
-        return strList.stream().collect(Collectors.toMap(Function.identity(), s->s));
+        return strList.stream().collect(Collectors.toMap(Function.identity(), s -> s + "_val"));
     }
 
 }
